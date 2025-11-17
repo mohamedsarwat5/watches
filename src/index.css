@@ -3,10 +3,12 @@
 
 :root {
   --poppins: 'Poppins', sans-serif;
+  --main: #1b1b1b;
 }
 
 @theme {
-  --font-poppins: var(--poppins)
+  --font-poppins: var(--poppins);
+  --color-main:var(--main)
 }
 
 body {
@@ -26,4 +28,8 @@ h2.banner {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+}
+
+.goBack:hover{
+  @apply text-blue-600
 }

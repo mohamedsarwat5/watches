@@ -7,7 +7,7 @@ export default function Banner() {
 
     return (
 
-        <div className=' bg-[#1b1b1b] lg:h-screen h-[400px] flex items-center justify-center text-center w-full relative overflow-hidden'>
+        <div className=' bg-main lg:h-screen h-[400px] flex items-center justify-center text-center w-full relative overflow-hidden'>
             {/* <img src={layer}
                 className='absolute -top-28  left-0 z-30  '
                 alt="" /> */}
