@@ -18,7 +18,7 @@ export default function Details() {
         <div className=' min-h-dvh w-full overflow-hidden bg-main lg:px-20 '>
             <Header className="text-white" text={`details`} desc={`Crafted with purpose and perfection.`} desc2={`Every detail crafted with intention, purpose, and perfection.`} />
             <div className='flex flex-col lg:flex-row items-center justify-between lg:py-10 py-4 px-4'>
-                <div className='text-white flex  flex-col space-y-8'>
+                <div className='text-white/75 flex  flex-col space-y-8'>
                     {text.slice(0, 3).map(((item, i) => (
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -39,7 +39,7 @@ export default function Details() {
                     <img src={comp} alt="" />
                 </motion.div>
 
-                <div className='text-white flex  flex-col space-y-8'>
+                <div className='text-white/75 flex  flex-col space-y-8'>
                     {text.slice(3).map(((item, i) => (
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
