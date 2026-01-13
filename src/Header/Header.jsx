@@ -1,0 +1,33 @@
+import { motion } from 'framer-motion';
+import React from 'react';
+
+export default function Header({ className, text, desc, desc2 }) {
+
+
+
+
+    return (
+        <div>
+            <motion.h2
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: .5 }}
+                className='text-white font-semibold uppercase text-center lg:text-2xl'>{text}</motion.h2>
+            <motion.hr
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: .5 }}
+                className='lg:w-[90px] w-[50px] mx-auto opacity-70 text-white mt-1 mb-2' />
+            <motion.h2
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: .5, delay: 0.5 }}
+                className={`${className} text-white text-center opacity-70 font-light hidden lg:block`}>{desc2}</motion.h2>
+            <motion.h2
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: .5, delay: 0.5 }}
+                className={`${className} text-white text-center opacity-70 font-light block lg:hidden`}>{desc}</motion.h2>
+        </div>
+    );
+}

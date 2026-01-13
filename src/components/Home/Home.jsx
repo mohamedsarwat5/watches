@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import screen from "/screen.png"
 import layer from '/layer.png';
 import Banner from '../Banner/Banner';
+import Details from '../Details/Details';
 
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
@@ -20,7 +21,8 @@ export default function Home() {
 
     return (
         <>
-            <section className="relative min-h-dvh overflow-hidden w-full">
+            {/* <div className=' fixed inset-0 bg-gray-900 z-50 box'></div> */}
+            <section className="relative min-h-dvh overflow-hidden w-full ">
                 {!loaded && <img
                     src={screen}
                     className='absolute inset-0 w-full h-full object-cover z-0'
@@ -33,17 +35,32 @@ export default function Home() {
                     autoPlay loop muted playsInline
                     className={`absolute top-0 left-0 h-full w-full  object-cover transition-opacity duration-100 ${loaded ? "opacity-100" : "opacity-0"}`}
                 ></video>
+
                 <div className=' text-white z-30 absolute lg:left-16 lg:bottom-16 left-4 bottom-4 '>
-                    <h2 className=' font-semibold lg:mb-4 mb-2 lg:text-[32px] text-xl'>Timeless Elegance on Your Wrist</h2>
-                    <p className='text-sm'>
+                    <motion.h2
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: .5, }}
+                        className=' font-semibold lg:mb-4 mb-2 lg:text-[36px] text-xl uppercase'>Timeless Elegance on <span className='block'></span> Your Wrist</motion.h2>
+                    <motion.p
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: .5, delay: 0.5 }}
+                        className='text-sm lg:text-xl'>
                         <span className='block'>Discover watches crafted with precision and </span>
-                        passion,where every second tells a story</p>
-                    <button className='bg-white/5 border backdrop-blur-xl py-2 px-3 lg:px-4 lg:py-2 text-sm rounded-lg mt-3'>
+                        passion,where every second tells a story</motion.p>
+                    <motion.button
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: .5, delay: 1 }}
+                        className='bg-white/5 border backdrop-blur-xl py-2 px-3 lg:px-9 lg:py-2 text-sm rounded-lg mt-3'>
                         Explore Collection
-                    </button>
+                    </motion.button>
                 </div>
+
             </section>
-            <Banner/>
+            <Banner />
+            <Details />
         </>
     );
 }

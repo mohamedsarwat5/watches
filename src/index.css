@@ -8,7 +8,7 @@
 
 @theme {
   --font-poppins: var(--poppins);
-  --color-main:var(--main)
+  --color-main: var(--main)
 }
 
 body {
@@ -30,6 +30,21 @@ h2.banner {
 
 }
 
-.goBack:hover{
+.goBack:hover {
   @apply text-blue-600
+}
+
+.box {
+  animation: 2s ease-in-out anim;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+
 }
