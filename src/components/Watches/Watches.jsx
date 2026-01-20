@@ -26,7 +26,7 @@ export default function Watches() {
             <h2 className='font-bold banner whitespace-nowrap text-center mx-auto uppercase text-[11vw] lg:text-[10vw] absolute lg:-top-10 top-0 left-1/2 -translate-x-1/2 '>Our Watches</h2>
 
 
-            <div className=' grid grid-cols-1 lg:grid-cols-3 gap-3 lg:mt-20 mt-5 px-4 '>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:mt-20 mt-5 md:mt-10 px-4 '>
 
                 {
                     watches.map((item, i) => (
