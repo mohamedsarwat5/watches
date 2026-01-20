@@ -4,6 +4,8 @@ import screen from "/screen.png"
 import layer from '/layer.png';
 import Banner from '../Banner/Banner';
 import Details from '../Details/Details';
+import BackgroundVideo from '../BackgroundVideo/BackgroundVideo';
+import Watches from '../Watches/Watches';
 
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
@@ -23,7 +25,7 @@ export default function Home() {
         <>
             {/* <div className=' fixed inset-0 bg-gray-900 z-50 box'></div> */}
             <section className="relative min-h-dvh overflow-hidden w-full ">
-                {!loaded && <img
+                {/* {!loaded && <img
                     src={screen}
                     className='absolute inset-0 w-full h-full object-cover z-0'
                     s />}
@@ -34,7 +36,9 @@ export default function Home() {
                     src="/vid.mp4"
                     autoPlay loop muted playsInline
                     className={`absolute top-0 left-0 h-full w-full  object-cover transition-opacity duration-100 ${loaded ? "opacity-100" : "opacity-0"}`}
-                ></video>
+                ></video> */}
+
+                <BackgroundVideo />
 
                 <div className=' text-white z-30 absolute lg:left-16 lg:bottom-16 left-4 bottom-4 '>
                     <motion.h2
@@ -61,6 +65,7 @@ export default function Home() {
             </section>
             <Banner />
             <Details />
+            <Watches />
         </>
     );
 }

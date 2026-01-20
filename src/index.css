@@ -16,15 +16,22 @@ body {
 
 }
 
+.title{
+  @apply relative
+}
 
+.title::after {
+  content: "";
+  @apply absolute -bottom-1 h-0.5 opacity-70 bg-white/70 mt-1 w-full left-0 
+}
 
 h2.banner {
   /* letter-spacing: 20px; */
   color: transparent;
-  opacity: .4;
+  opacity: .3;
   font-weight: 700;
   font-style: italic;
-  background: linear-gradient(to bottom, white, transparent 70%);
+  background: linear-gradient(to bottom, white, transparent 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 

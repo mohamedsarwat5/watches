@@ -15,7 +15,9 @@ export default function Details() {
     ]
 
     return (
-        <div className=' min-h-dvh w-full overflow-hidden bg-main lg:px-20 '>
+        <div className=' min-h-dvh w-full overflow-hidden bg-main lg:px-20 relative'>
+            <h2 className='font-bold banner text-center mx-auto uppercase text-[18vw] lg:text-[18vw] absolute lg:-top-[100px] -top-6 left-1/2 -translate-x-1/2 '>Details</h2>
+
             <Header className="text-white" text={`details`} desc={`Crafted with purpose and perfection.`} desc2={`Every detail crafted with intention, purpose, and perfection.`} />
             <div className='flex flex-col lg:flex-row items-center justify-between lg:py-10 py-4 px-4'>
                 <div className='text-white/75 flex  flex-col space-y-8'>
@@ -44,7 +46,7 @@ export default function Details() {
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: .9, delay: i * 0.2 }}
+                            transition={{ duration: .5, delay: i * 0.1 }}
                             className='space-y-1' key={i}>
                             <h2>{item.text1}</h2>
                             <h2 className='text-xs'>{item.text2}</h2>
