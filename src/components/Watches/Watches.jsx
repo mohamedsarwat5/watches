@@ -33,7 +33,7 @@ export default function Watches() {
                         <div key={i} className='bg-[#252525] aspect-square border border-white/15 rounded-lg relative '>
                             <img className=' object-cover m-auto' src={item.img} alt="" />
                             <div className='absolute inset-0 bg-black/25 p-4 '>
-                                <div className='flex flex-col space-y-3 lg:translate-y-[264px] translate-y-[230px]'>
+                                <div className='flex flex-col space-y-3 absolute bottom-4 left-4 right-4'>
                                     <h2 className='text-white lg:text-lg text-md'>{item.desc}</h2>
                                     <div className='flex justify-between items-center '>
                                         <span className='text-white font-semibold lg:text-xl text-lg'>{item.price}</span>

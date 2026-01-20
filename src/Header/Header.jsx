@@ -13,11 +13,6 @@ export default function Header({ className, text, desc, desc2 }) {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: .5 }}
                 className='text-white font-semibold uppercase text-center lg:text-2xl title w-fit mx-auto'>{text}</motion.h2>
-            {/* <motion.hr
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: .5 }}
-                className='lg:w-[90px] w-[50px] mx-auto opacity-70 text-white mt-1 mb-2' /> */}
             <motion.h2
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
