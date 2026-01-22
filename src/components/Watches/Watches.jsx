@@ -9,7 +9,7 @@ import w6 from '/w6.png';
 import Header from '../../Header/Header';
 
 
-export default function Watches() {
+export default function Watches({id,className}) {
 
     const watches = [
         { img: w1, price: "320$", desc: "The Eclipse Minimalist Watch | Matte Black Edition" },
@@ -21,7 +21,7 @@ export default function Watches() {
     ];
 
     return (
-        <div className=' min-h-dvh w-full overflow-hidden bg-main lg:px-32 relative py-4'>
+        <div className={` min-h-dvh w-full overflow-hidden bg-main lg:px-32 relative py-4`} id={id}>
             <Header text={`Our Watches`} desc={`Made for those who value more`} desc2={"Explore our signature designs for those who value more than time"} />
             <h2 className='font-bold banner whitespace-nowrap text-center mx-auto uppercase text-[11vw] lg:text-[10vw] absolute lg:-top-10 top-0 left-1/2 -translate-x-1/2 '>Our Watches</h2>
 

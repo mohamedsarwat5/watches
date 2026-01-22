@@ -6,11 +6,13 @@ import Banner from '../Banner/Banner';
 import Details from '../Details/Details';
 import BackgroundVideo from '../BackgroundVideo/BackgroundVideo';
 import Watches from '../Watches/Watches';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
     const videoRef = useRef(null)
 
+    const [showP, setShowP] = useState(false);
     useEffect(() => {
 
         const video = videoRef.current
@@ -21,51 +23,57 @@ export default function Home() {
         return () => video.removeEventListener("loadeddata", handleLoaded)
     }, [])
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowP(true);
+        }, 2600);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <>
             {/* <div className=' fixed inset-0 bg-gray-900 z-50 box'></div> */}
             <section className="relative min-h-dvh overflow-hidden w-full ">
-                {/* {!loaded && <img
-                    src={screen}
-                    className='absolute inset-0 w-full h-full object-cover z-0'
-                    s />}
-                <div className='absolute inset-0 w-full h-full bg-black/20 z-20' />
-                <img className='absolute lg:-bottom-60 -bottom-[60px]  w-full z-40 right-0' src={layer} alt="" />
-                <video
-                    ref={videoRef}
-                    src="/vid.mp4"
-                    autoPlay loop muted playsInline
-                    className={`absolute top-0 left-0 h-full w-full  object-cover transition-opacity duration-100 ${loaded ? "opacity-100" : "opacity-0"}`}
-                ></video> */}
-
                 <BackgroundVideo />
 
                 <div className=' text-white z-30 absolute lg:left-16 lg:bottom-16 left-4 bottom-4 '>
-                    <motion.h2
+                    <h2
+                        className=' font-semibold lg:mb-4 mb-2 lg:text-[36px] text-xl uppercase whitespace-pre-line'>
+                        <Typewriter
+                            words={["Timeless Elegance on\nYour Wrists"]}
+                            loop={1}
+                            typeSpeed={70}
+                            deleteSpeed={0}
+
+                        />
+                    </h2>
+                    {showP && (
+                        <p className="text-sm lg:text-xl whitespace-pre-line">
+                            <Typewriter
+                                words={[
+                                    "Discover watches crafted with precision and\npassion, where every second tells a story",
+                                ]}
+                                loop={1}
+                                typeSpeed={40}
+                                deleteSpeed={0}
+                            />
+                        </p>
+                    )}
+                    <motion.a
+                        href="#watches"
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: .5, }}
-                        className=' font-semibold lg:mb-4 mb-2 lg:text-[36px] text-xl uppercase'>Timeless Elegance on <span className='block'></span> Your Wrist</motion.h2>
-                    <motion.p
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: .5, delay: 0.5 }}
-                        className='text-sm lg:text-xl'>
-                        <span className='block'>Discover watches crafted with precision and </span>
-                        passion,where every second tells a story</motion.p>
-                    <motion.button
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: .5, delay: 1 }}
-                        className='bg-white/5 border backdrop-blur-xl py-2 px-3 lg:px-9 lg:py-2 text-sm rounded-lg mt-3'>
+                        transition={{ duration: .5, delay: 6.5 }}
+                        className='bg-white/5 border backdrop-blur-xl py-2 px-3 lg:px-9 lg:py-2 text-sm rounded-lg mt-3 inline-block'>
                         Explore Collection
-                    </motion.button>
+                    </motion.a>
                 </div>
 
             </section>
             <Banner />
             <Details />
-            <Watches />
+            <Watches id={"watches"}  />
         </>
     );
 }
