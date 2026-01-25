@@ -30,9 +30,13 @@ export default function Watches({id,className}) {
 
                 {
                     watches.map((item, i) => (
-                        <div key={i} className='bg-[#252525] aspect-square border border-white/15 rounded-lg relative '>
-                            <img className=' object-cover m-auto' src={item.img} alt="" />
-                            <div className='absolute inset-0 bg-black/25 p-4 '>
+                        <motion.div key={i}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: i * 0.2 }}
+                        className='bg-[#252525] aspect-square border border-white/15 rounded-lg relative overflow-hidden group'>
+                            <img className=' object-cover m-auto group-hover:scale-125 transition-all duration-300' src={item.img} alt="" />
+                            <div className='absolute inset-0 bg-black/25 p-4 group-hover:bg-black/50 transition-all duration-300 '>
                                 <div className='flex flex-col space-y-3 absolute bottom-4 left-4 right-4'>
                                     <h2 className='text-white lg:text-lg text-md'>{item.desc}</h2>
                                     <div className='flex justify-between items-center '>
@@ -42,7 +46,7 @@ export default function Watches({id,className}) {
                                 </div>
 
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
 
