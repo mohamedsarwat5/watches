@@ -65,7 +65,7 @@ export default function TestSlider() {
                             <p className='mt-4'>“Very comfortable to wear and looks far more expensive than it is. You can really see the attention to detail.”</p>
                             <div className='flex items-center justify-center space-x-2'>
                                 {imgs.map((img, i) => {
-                                    return <img key={i} className='w-[120px]  lg:w-[120px] aspect-square object-cover rounded-lg inline-block mt-4' src={img} alt="" />
+                                    return <img key={i} className='w-[100px]  lg:w-[120px] aspect-square object-cover rounded-lg inline-block mt-4' src={img} alt="" />
                                 })}
                             </div>
                         </div>
