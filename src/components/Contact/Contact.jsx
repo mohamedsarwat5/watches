@@ -1,6 +1,6 @@
 import React from 'react';
 import Space from '../Space/Space';
-import group from "/group.png"
+// import group from "/group.png"
 import user from "/user.png";
 import email from "/email.png";
 import message from "/message.png";
@@ -23,7 +23,7 @@ export default function Contact() {
                     <div className='flex flex-col lg:w-1/2 w-full text-white px-5'>
                         <h2 className='text-white lg:text-2xl text-xl font-semibold mb-4 title w-fit uppercase'>Speak to the Timekeepers.</h2>
                         <p className='mb-5 mt-2'>Every question has a perfect moment, and we're here for it.</p>
-                        <img className='lg:w-[400px] mx-auto' src={group} alt="" />
+                        <img className='lg:w-[400px] mx-auto' src="/group.png" alt="" />
                     </div>
 
                     <div className='lg:w-1/2 w-full px-4'>
