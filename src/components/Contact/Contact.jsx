@@ -1,13 +1,13 @@
 import React from 'react';
 import Space from '../Space/Space';
-import group from "/group.png";
+import group from "/group.png"
 import user from "/user.png";
 import email from "/email.png";
 import message from "/message.png";
 import send from "/send.png";
 
 export default function Contact() {
-    
+
     function handleSubmit(e) {
         e.preventDefault();
         // Handle form submission logic here
