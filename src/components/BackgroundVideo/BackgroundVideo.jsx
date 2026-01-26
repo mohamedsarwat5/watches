@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import screen from "/screen.png";
+import screen2 from "/screen2.png";
 
 function BackgroundVideo() {
     const [loaded, setLoaded] = useState(false);
@@ -19,7 +19,7 @@ function BackgroundVideo() {
         <>
             {!loaded && (
                 <img
-                    src={screen}
+                    src={screen2}
                     className="absolute inset-0 w-full h-full object-cover"
                     alt=""
                 />
@@ -27,7 +27,7 @@ function BackgroundVideo() {
 
             <video
                 ref={videoRef}
-                src="/vid.mp4"
+                src="/vidbg.mp4"
                 autoPlay
                 loop
                 muted

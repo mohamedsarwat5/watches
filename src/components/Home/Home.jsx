@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import screen from "/screen.png"
+import bgmobile from '/bgmobile.jpg';
+import bgscreen from "/bgscreen.webp"
 import layer from '/layer.png';
 import Banner from '../Banner/Banner';
 import Details from '../Details/Details';
@@ -34,10 +36,20 @@ export default function Home() {
     return (
         <>
             {/* <div className=' fixed inset-0 bg-gray-900 z-50 box'></div> */}
-            <section className="relative min-h-dvh overflow-hidden w-full ">
-                <BackgroundVideo />
-
-                <div className=' text-white z-30 absolute lg:left-16 lg:bottom-16 left-4 bottom-4 '>
+            <section className="relative min-h-dvh overflow-hidden w-full bg-fixed ">
+                {/* <BackgroundVideo /> */}
+                <div className='absolute inset-0 bg-black/25 z-40'></div>
+                <img
+                    src={bgscreen}
+                    className="absolute inset-0 w-full h-full object-cover bg-fixed hidden lg:block "
+                    alt=""
+                />
+                <img
+                    src={bgmobile}
+                    className="absolute inset-0 w-full h-full object-cover  lg:hidden"
+                    alt=""
+                />
+                <div className=' text-white z-50 absolute lg:left-16 lg:bottom-16 left-4 bottom-4 '>
                     <h2
                         className=' font-semibold lg:mb-4 mb-2 lg:text-[36px] text-xl uppercase whitespace-pre-line'>
                         <Typewriter
@@ -73,7 +85,7 @@ export default function Home() {
             </section>
             <Banner />
             <Details />
-            <Watches id={"watches"}  />
+            <Watches id={"watches"} />
         </>
     );
 }

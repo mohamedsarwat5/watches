@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import w1 from '/w1.png';
-import w2 from '/w22.png';
-import w3 from '/w3.png';
-import w4 from '/w4.png';
-import w5 from '/w5.png';
-import w6 from '/w6.png';
+import w1 from '/w1.webp';
+import w2 from '/w22.webp';
+import w3 from '/w3.webp';
+import w4 from '/w4.webp';
+import w5 from '/w5.webp';
+import w6 from '/w6.webp';
 import Header from '../../Header/Header';
 
 
