@@ -11,6 +11,8 @@ import OurWorld from './components/OurWorld/OurWorld';
 import Watches from './components/Watches/Watches';
 import NotFound from './components/NotFound/NotFound';
 import Testimonies from './components/Testimonies/Testimonies';
+import Details from './components/Details/Details';
+import Contact from './components/Contact/Contact';
 
 export default function App() {
 
@@ -22,6 +24,8 @@ export default function App() {
         { path: "watches", element: <Watches /> },
         { path: "ourworld", element: <OurWorld /> },
         { path: "testimonies", element: <Testimonies /> },
+        { path: "details", element: <Details /> },
+        { path: "contact", element: <Contact /> },
         { path: '*', element: <NotFound /> }
       ]
     }

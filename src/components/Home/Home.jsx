@@ -12,6 +12,7 @@ import Watches from '../Watches/Watches';
 import { Typewriter } from 'react-simple-typewriter';
 import { NavLink } from 'react-router-dom';
 import Testimonies from '../Testimonies/Testimonies';
+import Contact from '../Contact/Contact';
 
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
@@ -93,6 +94,7 @@ export default function Home() {
             <Details />
             <Watches />
             <Testimonies />
+            <Contact />
         </>
     );
 }

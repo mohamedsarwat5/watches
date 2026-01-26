@@ -28,6 +28,10 @@ body {
   color: rgb(188, 188, 188);
   opacity: 1;
 }
+.textLine::after{
+  content: "";
+  @apply absolute bottom-1 left-0 w-full h-0.5 bg-white/70 opacity-70
+}
 
 .link {
   @apply transition-colors duration-300 ease-in-out

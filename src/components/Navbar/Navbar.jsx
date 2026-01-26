@@ -13,7 +13,7 @@ export default function Navbar() {
         { name: 'our world', path: '/' },
         { name: 'Watches', path: '/watches' },
         { name: 'testimonies', path: '/testimonies' },
-        { name: 'tracking', path: '/tracking' },
+        { name: 'tracking', path: '/details' },
         { name: 'Contact Us', path: '/contact' },
     ];
 

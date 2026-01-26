@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Header/Header';
 import comp from '/comp.png';
 import { motion } from 'framer-motion';
+import Space from '../Space/Space';
 
 export default function Details() {
 
@@ -14,7 +15,8 @@ export default function Details() {
         { text1: 'The Dark Cohesion Band', text2: 'A durable metal bracelet with brushed charcoal links for a cohesive, modern finish.' },
     ]
 
-    return (
+    return (<>
+    <Space />
         <div className=' min-h-dvh w-full overflow-hidden bg-main lg:px-20 relative'>
             <h2 className='font-bold banner text-center mx-auto uppercase text-[18vw] lg:text-[18vw] absolute lg:-top-[100px] -top-6 left-1/2 -translate-x-1/2 '>Details</h2>
 
@@ -56,5 +58,5 @@ export default function Details() {
 
             </div>
         </div>
-    );
+    </>);
 }
