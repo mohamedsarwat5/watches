@@ -3,12 +3,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import screen from "/screen.png"
 import bgmobile from '/bgmobile.jpg';
 import bgscreen from "/bgscreen.webp"
+import bgscreen1 from "/bg.jpg"
 import layer from '/layer.png';
 import Banner from '../Banner/Banner';
 import Details from '../Details/Details';
 import BackgroundVideo from '../BackgroundVideo/BackgroundVideo';
 import Watches from '../Watches/Watches';
 import { Typewriter } from 'react-simple-typewriter';
+import { NavLink } from 'react-router-dom';
+import Testimonies from '../Testimonies/Testimonies';
 
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
@@ -72,20 +75,24 @@ export default function Home() {
                             />
                         </p>
                     )}
-                    <motion.a
-                        href="#watches"
+                    <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: .5, delay: 6.5 }}
-                        className='bg-white/5 border backdrop-blur-xl py-2 px-3 lg:px-9 lg:py-2 text-sm rounded-lg mt-3 inline-block'>
-                        Explore Collection
-                    </motion.a>
+                    >
+                        <NavLink
+                            to={"/watches"}
+                            className='bg-white/5 cursor-pointer border backdrop-blur-xl py-2 px-3 lg:px-9 lg:py-2 text-sm rounded-lg mt-3 inline-block'>
+                            Explore Collection
+                        </NavLink>
+                    </motion.div>
                 </div>
 
             </section>
             <Banner />
             <Details />
-            <Watches id={"watches"} />
+            <Watches />
+            <Testimonies />
         </>
     );
 }

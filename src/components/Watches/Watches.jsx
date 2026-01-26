@@ -7,6 +7,7 @@ import w4 from '/w4.webp';
 import w5 from '/w5.webp';
 import w6 from '/w6.webp';
 import Header from '../../Header/Header';
+import Space from '../Space/Space';
 
 
 export default function Watches({id,className}) {
@@ -20,7 +21,8 @@ export default function Watches({id,className}) {
         { img: w6, price: "499$", desc: "The Fugitive Ultra-Black Chronograph Watch	Brushed Metal Bracelet" },
     ];
 
-    return (
+    return (<>
+    <Space />
         <div className={` min-h-dvh w-full overflow-hidden bg-main lg:px-32 relative py-4`} id={id}>
             <Header text={`Our Watches`} desc={`Made for those who value more`} desc2={"Explore our signature designs for those who value more than time"} />
             <h2 className='font-bold banner whitespace-nowrap text-center mx-auto uppercase text-[11vw] lg:text-[10vw] absolute lg:-top-10 top-0 left-1/2 -translate-x-1/2 '>Our Watches</h2>
@@ -31,9 +33,9 @@ export default function Watches({id,className}) {
                 {
                     watches.map((item, i) => (
                         <motion.div key={i}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: i * 0.2 }}
+                        initial={{ opacity: 0  }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: i * 0.1 }}
                         className='bg-[#252525] aspect-square border border-white/15 rounded-lg relative overflow-hidden group'>
                             <img className=' object-cover m-auto group-hover:scale-125 transition-all duration-300' src={item.img} alt="" />
                             <div className='absolute inset-0 bg-black/25 p-4 group-hover:bg-black/50 transition-all duration-300 '>
@@ -53,5 +55,5 @@ export default function Watches({id,className}) {
             </div>
 
         </div>
-    );
+    </>);
 }
